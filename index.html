@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+    <title>Frontend Mentor | Cartão com detalhes interativos </title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.0/sweetalert.min.js">
+    </script>
+    
+    <link rel="stylesheet" href="src/estilos/reset.css">
+    <link rel="stylesheet" href="src/estilos/styles.css">   
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+
+  </head>
+
+  <body class="container__geral">
+
+    <main class="container__principal">
+
+      <section class="container__cartoes">
+
+        <div class="cartao__frente">
+          <div class="cartao__frente--circulos">
+            <div class="circulo1"></div>
+            <div class="circulo2"></div>
+          </div>
+          <p class="cartao__frente--numero">0000 0000 0000 0000</p>          
+          <p class="cartao__frente--nome">Seu Nome</p>
+          <p class="cartao__frente--mes">MM</p>
+          <p class="cartao__frente--ano">AA</p>
+        </div>
+
+        <div class="cartao__fundo"> 
+          <p class="cartao__fundo--codigo">000</p>
+        </div>
+
+      </section>
+
+      <section class="container__formulario">
+
+        <form action="" class="formulario" id="formulario">
+          
+          <label for="nome-completo" class="formulario__label formulario__linha1">Nome do Titular do Cartão</label>
+          <input type="text" name="nome-completo" id="nome-completo" class="formulario__input formulario__linha2" placeholder="Seu Nome" oninput="inputNome()" required>
+          
+          <label for="numero-cartao" class="formulario__label formulario__linha3">Número do cartão</label>
+          <input type="text" name="numero-cartao" id="numero-cartao" class="formulario__input formulario__linha4" placeholder="0000 0000 0000 0000" maxlength="19" minlength="19" oninput="inputNumeroCartao()"  required>
+          
+          <label for="validade-mes" class="formulario__label formulario__linha5--a">Data de Exp. (MM/AA)</label>
+          <input type="text" name="validade-mes" id="validade-mes" class="validade formulario__input formulario__linha6--a" placeholder="MM" maxlength="2" oninput="inputMes()" required>
+          <input type="text" name="validade-ano" id="validade-ano" class="validade formulario__input formulario__linha6--b" placeholder="AA" maxlength="2" oninput="inputAno()" required>
+            
+          <label for="codigo-cartao" class="formulario__label formulario__linha5--b">CVC</label>
+          <input type="number" name="codigo-cartao" id="codigo-cartao" class="formulario__input formulario__linha6--c" placeholder="000" maxlength="3" oninput="inputCodigo()" required>     
+
+          <button type="submit" name="btn-enviar" id="enviar" class="formulario__botao">Confirm</button>
+        </form>        
+
+      </section>
+    </main>
+    
+    <footer class="container__rodape">
+      <p class="rodape__texto">Desafio</p>
+      <a href="https://github.com/Joaomarcosr" class="rodape__imagem">
+        <img src="src/images/github.svg" alt="Acesse meu Github">
+      </a>
+      <a href="https://www.linkedin.com/in/joaomarcosrochaaraujo/" class="rodape__imagem">
+        <img src="src/images/linkedin.svg" alt="Acesse meu LinkedIn">
+      </a>
+    </footer>
+
+    <script src="src/js/main.js"></script>
+  </body>
+</html>

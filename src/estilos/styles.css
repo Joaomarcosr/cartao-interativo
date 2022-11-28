@@ -1,0 +1,86 @@
+@import url("../estilos/cartoes.css");
+@import url("../estilos/formulario.css");
+
+:root {
+    --fonte-principal: 'Space Grotesk';
+
+    --branco: hsl(0, 0%, 100%);
+    --violeta-fraco: hsl(270, 3%, 87%);
+    --violeta-medio: hsl(279, 6%, 55%);
+    --violeta-forte: hsl(278, 68%, 11%);
+}
+
+.container__geral {
+    background-image: url("../images/bg-main-desktop.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    box-sizing: border-box;
+    font-family: var(--fonte-principal);
+    font-weight: 500;
+    min-height: 100%;
+}
+
+.container__principal {
+    align-items: center;
+    display: flex;
+    padding: 8em;
+    height: calc(94vh - 16em);
+}
+
+.container__rodape {
+    align-items: center;
+    background: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    min-height: 6vh;
+}
+
+.rodape__texto {
+    color: var(--branco);
+    font-family: var(--fonte-principal);
+    font-size: 0.9rem;
+}
+
+.rodape__imagem {
+    margin-left: 0.75rem;
+    width: 2rem;
+}
+
+@media screen and (max-width: 1100px) {
+    .rodape__texto {
+        font-size: 0.75rem;
+    }
+
+    .rodape__imagem {
+        width: 1.75rem;
+    }
+}
+
+@media screen and (max-width: 860px) {
+    .container__geral {
+        background-image: url("../images/bg-main-mobile.png");
+        background-size: 100vw;
+    }
+
+    .container__principal {
+        height: calc(94vh - 8em);
+        display: block;
+        padding: 4em;
+    }
+}
+
+
+@media screen and (max-width: 400px) {
+    .container__principal{
+        height: calc(87vh);
+        padding: 2em;
+    }
+
+    .rodape__texto {
+        font-size: 0.7rem;
+    }
+
+    .rodape__imagem {
+        width: 1.25rem;
+    }
+}

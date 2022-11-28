@@ -1,0 +1,193 @@
+.container__cartoes {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.cartao__frente {
+    align-items: flex-end;
+    background-image: url("../images/bg-card-front.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    bottom: 50%;
+    border-radius: 0.5rem;
+    box-shadow: rgba(100, 100, 111, 0.3) 0px 7px 29px 0px;
+    box-sizing: border-box;
+    color: var(--branco);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    height: 245px;
+    left: 12%;
+    padding: 1.5rem;
+    position: absolute;
+    width: 447px;
+}
+
+.cartao__frente--circulos {
+    align-items: center;
+    display: flex;
+    gap: 1em;
+    grid-column: 1/1;
+}
+
+.circulo1 {
+    background-color: var(--branco);
+    border-radius: 50%;
+    height: 2.5em;
+    width: 2.5em;
+}
+
+.circulo2 {
+    background-color: transparent;
+    border: 1px solid var(--branco);
+    border-radius: 50%;
+    height: 1em;
+    width: 1em;
+}
+
+.cartao__frente--numero {
+    font-size: 1.6rem;
+    grid-column: 1/5;
+    grid-row: 3/4;
+    letter-spacing: 0.3rem;
+}
+
+.cartao__frente--nome {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    grid-column: 1/4;
+    grid-row: 4/4;
+    letter-spacing: 0.15rem;
+}
+
+.cartao__frente--mes, .cartao__frente--ano {
+    font-size: 0.8rem;
+    justify-self: right;
+    grid-column: 4/4;
+    grid-row: 4/4;
+    letter-spacing: 0.15rem;
+}
+
+.cartao__frente--mes {
+    margin-right: 24px;
+}
+
+.cartao__fundo {
+    align-items: center;
+    background-image: url("../images/bg-card-back.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    border-radius: 0.5rem;
+    box-sizing: border-box;
+    box-shadow: rgba(100, 100, 111, 0.3) 0px 7px 29px 0px;
+    color: var(--branco);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    height: 245px;
+    left: 18%;
+    top: 54%;
+    padding: 1.5rem;
+    position: absolute;
+    width: 447px;
+}
+
+.cartao__fundo--codigo {
+    grid-column: 4/4;
+    grid-row: 3/4;
+    justify-self: center;
+    letter-spacing: 0.2rem;
+}
+
+@media screen and (max-width: 1100px) {
+    .cartao__frente, .cartao__fundo {
+        height: 190px;
+        width: 350px;
+    }
+
+    .cartao__frente--numero {
+        font-size: 1.2rem;
+        letter-spacing: 0.2rem;
+    }
+
+    .cartao__frente--nome, .cartao__frente--mes, .cartao__frente--ano {
+        font-size: 0.7rem;
+    }
+
+    .circulo1 {
+        height: 2em;
+        width: 2em;
+    }
+
+    .circulo2 {
+        height: 0.75em;
+        width: 0.75em;
+    }
+}
+
+@media screen and (max-width: 860px) {
+    .cartao__frente, .cartao__fundo {
+        padding: 1rem;
+        position: absolute;
+    }
+    .cartao__frente {
+        top: 11em;
+        left: 5em;
+        z-index: 1;
+    }
+    .cartao__fundo{
+        top: 3em;
+        left: 12em;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .cartao__frente, .cartao__fundo {
+        height: 163px;
+        width: 300px;
+    }
+
+    .cartao__frente--numero {
+        font-size: 1.0rem;
+        letter-spacing: 0.2rem;
+    }
+
+    .cartao__frente {
+        top: 9em;
+        left: 1em;
+        z-index: 1;
+    }
+    .cartao__fundo{
+        top: 3em;
+        left: 7em;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .cartao__frente, .cartao__fundo {
+        padding: 1rem;
+        position: absolute;
+        height: 136px;
+        width: 250px;
+    }
+
+    .cartao__frente--numero, .cartao__fundo--codigo {
+        font-size: 0.8rem;
+        letter-spacing: 0.2rem;
+    }
+
+    .cartao__frente--nome, .cartao__frente--mes, .cartao__frente--ano {
+        font-size: 0.5rem;
+    }
+
+    .circulo1 {
+        height: 1.25em;
+        width: 1.25em;
+    }
+
+    .circulo2 {
+        height: 0.6em;
+        width: 0.6em;
+    }
+}
